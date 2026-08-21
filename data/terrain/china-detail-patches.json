@@ -1,0 +1,67 @@
+{
+  "id": "china-detail-patches",
+  "type": "terrain-detail-patches",
+  "units": "meters",
+  "note": "Project-authored local height offsets layered over the base DEM. Add small patches here when hand-sculpting or tracing approved local terrain references.",
+  "patches": [
+    {
+      "id": "himalaya-east-lift",
+      "label": "喜马拉雅东段抬升",
+      "kind": "radial",
+      "center": { "lat": 29.5, "lng": 88.5 },
+      "radiusDegrees": 4.2,
+      "deltaMeters": 900
+    },
+    {
+      "id": "sichuan-basin-depression",
+      "label": "四川盆地凹陷",
+      "kind": "radial",
+      "center": { "lat": 30.5, "lng": 104.5 },
+      "radiusDegrees": 3.6,
+      "deltaMeters": -420
+    },
+    {
+      "id": "taihang-qinling-transition",
+      "label": "太行-秦岭过渡带",
+      "kind": "radial",
+      "center": { "lat": 35.4, "lng": 111.2 },
+      "radiusDegrees": 3.4,
+      "deltaMeters": 360
+    },
+    {
+      "id": "tarim-basin-soften",
+      "label": "塔里木盆地低地修正",
+      "kind": "radial",
+      "center": { "lat": 40.4, "lng": 84.0 },
+      "radiusDegrees": 4.6,
+      "deltaMeters": -280
+    },
+    {
+      "id": "qinling-traced-ridge-band",
+      "label": "秦岭临摹山脊带",
+      "kind": "line-band",
+      "points": [
+        { "lat": 33.6, "lng": 105.5 },
+        { "lat": 34.0, "lng": 107.4 },
+        { "lat": 34.2, "lng": 109.2 },
+        { "lat": 33.8, "lng": 111.0 }
+      ],
+      "widthDegrees": 0.42,
+      "deltaMeters": 260
+    },
+    {
+      "id": "hanzhong-basin-polygon-mask",
+      "label": "Hanzhong basin polygon mask",
+      "kind": "polygon-mask",
+      "points": [
+        { "lat": 32.82, "lng": 106.55 },
+        { "lat": 33.36, "lng": 106.78 },
+        { "lat": 33.44, "lng": 107.42 },
+        { "lat": 33.04, "lng": 107.78 },
+        { "lat": 32.72, "lng": 107.18 }
+      ],
+      "edgeFeatherDegrees": 0.18,
+      "deltaMeters": -110
+    }
+  ]
+}

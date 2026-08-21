@@ -1,0 +1,44 @@
+{
+  "id": "china-approved-detail-patches",
+  "type": "terrain-detail-patches",
+  "units": "meters",
+  "note": "Reviewed local height offsets promoted from trace-derived patch suggestions. Merge selected patches into china-detail-patches.json only after visual review.",
+  "patches": [
+    {
+      "id": "himalaya-main-ridge-sculpt-01",
+      "label": "Reviewed 喜马拉雅主脊线 1",
+      "kind": "radial",
+      "center": {
+        "lat": 30,
+        "lng": 81.3
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "sourceSuggestionId": "himalaya-main-ridge-sculpt-01",
+      "sourceTraceId": "himalaya-main-ridge",
+      "sourceTraceKind": "ridge",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "qinling-ridge-sculpt-03",
+      "label": "Reviewed 秦岭山脊线 3",
+      "kind": "radial",
+      "center": {
+        "lat": 34,
+        "lng": 109
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "sourceSuggestionId": "qinling-ridge-sculpt-03",
+      "sourceTraceId": "qinling-ridge",
+      "sourceTraceKind": "ridge",
+      "reviewStatus": "approved"
+    }
+  ],
+  "sourceSuggestionLayerId": "china-trace-patch-suggestions",
+  "summary": {
+    "total": 2,
+    "lifts": 2,
+    "depressions": 0
+  }
+}

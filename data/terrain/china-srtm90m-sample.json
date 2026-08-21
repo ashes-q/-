@@ -1,0 +1,24 @@
+{
+  "id": "china-srtm90m-sample",
+  "type": "height-grid",
+  "dataset": "srtm90m",
+  "units": "meters",
+  "sourceName": "Open Topo Data SRTM 90m API",
+  "sourceUrl": "https://api.opentopodata.org/v1/srtm90m",
+  "sourceDatasetUrl": "https://www.opentopodata.org/datasets/srtm/",
+  "generatedAt": "2026-07-02",
+  "note": "Low-resolution real DEM sample for the China Terrain Atlas. Replace with denser GeoTIFF-derived grids for production detail.",
+  "latitudes": [18, 22.5, 27, 31.5, 36, 40.5, 45, 49.5, 54],
+  "longitudes": [73, 79.2, 85.4, 91.6, 97.8, 104, 110.2, 116.4, 122.6, 128.8, 135],
+  "elevationsMeters": [
+    [0, 466, 0, 0, 559, 184, 0, 0, 0, 0, 0],
+    [44, 693, 351, 0, 958, 297, 92, 0, 0, 0, 0],
+    [293, 152, 93, 1776, 901, 2235, 1092, 113, 0, 0, 0],
+    [187, 5078, 5638, 4563, 5017, 1620, 2396, 112, 0, 0, 0],
+    [4306, 4490, 4959, 4933, 3119, 1734, 1114, 219, 0, 123, 0],
+    [1360, 1121, 912, 1117, 1257, 1509, 1000, 770, 119, 143, 0],
+    [470, 2318, 317, 1025, 2433, 1191, 915, 882, 154, 354, 492],
+    [658, 515, 1338, 2458, 1831, 828, 1819, 702, 618, 104, 99],
+    [108, 142, 306, 408, 1423, 684, 601, 825, 571, 424, 1596]
+  ]
+}

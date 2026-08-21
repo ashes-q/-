@@ -1,0 +1,121 @@
+{
+  "createdAt": "2026-07-02",
+  "purpose": "Raw geodata sources for China Terrain Atlas boundary and river replacement work.",
+  "sources": [
+    {
+      "id": "geoboundaries-chn-adm1-simplified",
+      "name": "geoBoundaries China ADM1 simplified GeoJSON",
+      "path": "data/raw/geoboundaries-chn-adm1-simplified.geojson",
+      "metadataPath": "data/raw/geoboundaries-chn-adm1-meta.json",
+      "license": "Public Domain per geoBoundaries metadata",
+      "use": "Primary candidate for province boundary rendering.",
+      "featureCount": 34,
+      "sourceUrl": "https://www.geoboundaries.org/api/current/gbOpen/CHN/ADM1"
+    },
+    {
+      "id": "cn-atlas-prefectures",
+      "name": "cn-atlas China prefecture boundaries GeoJSON",
+      "path": "data/raw/cn-atlas-prefectures.geojson",
+      "license": "ISC per cn-atlas package metadata",
+      "use": "Sharper prefecture-level administrative boundary rendering for close terrain inspection.",
+      "featureCount": 375,
+      "sourceUrl": "https://raw.githubusercontent.com/BarbarossaWang/cn-atlas/master/prefectures.json",
+      "sourceRepositoryUrl": "https://github.com/BarbarossaWang/cn-atlas"
+    },
+    {
+      "id": "natural-earth-admin0-50m",
+      "name": "Natural Earth Admin 0 Countries 1:50m",
+      "path": "data/raw/natural-earth-admin0-50m",
+      "archivePath": "data/raw/natural-earth-admin0-50m.zip",
+      "license": "Public domain",
+      "use": "Country outline and cross-check source."
+    },
+    {
+      "id": "natural-earth-admin1-50m",
+      "name": "Natural Earth Admin 1 States/Provinces 1:50m",
+      "path": "data/raw/natural-earth-admin1-50m",
+      "archivePath": "data/raw/natural-earth-admin1-50m.zip",
+      "license": "Public domain",
+      "use": "Province/state boundary cross-check source."
+    },
+    {
+      "id": "natural-earth-rivers-10m",
+      "name": "Natural Earth Rivers and Lake Centerlines 1:10m",
+      "path": "data/raw/natural-earth-rivers-10m",
+      "archivePath": "data/raw/natural-earth-rivers-10m.zip",
+      "license": "Public domain",
+      "use": "Hydrology source for replacing hand-drawn river guides."
+    },
+    {
+      "id": "natural-earth-lakes-10m",
+      "name": "Natural Earth Lakes 1:10m",
+      "path": "data/raw/natural-earth-lakes-10m",
+      "archivePath": "data/raw/natural-earth-lakes-10m.zip",
+      "license": "Public domain",
+      "use": "Lake and reservoir outline source for hidden water reference layer."
+    },
+    {
+      "id": "natural-earth-coastline-10m",
+      "name": "Natural Earth Coastline 1:10m",
+      "path": "data/raw/natural-earth-coastline-10m",
+      "archivePath": "data/raw/natural-earth-coastline-10m.zip",
+      "license": "Public domain",
+      "use": "Coastline and island outline source for hidden water reference layer."
+    },
+    {
+      "id": "china-srtm90m-full",
+      "name": "China SRTM 90m full-density height grid",
+      "path": "data/terrain/china-srtm90m-full.json",
+      "license": "SRTM / Open Topo Data dataset terms; verify before production redistribution",
+      "use": "Higher-density real DEM grid used as the runtime terrain mesh's preferred full-map national height source.",
+      "sourceUrl": "https://api.opentopodata.org/v1/srtm90m",
+      "sourceDatasetUrl": "https://www.opentopodata.org/datasets/srtm/",
+      "sourceRepositoryUrl": "https://github.com/ajnisbet/opentopodata",
+      "generatedBy": "scripts/generate-china-dem-grid.js"
+    },
+    {
+      "id": "china-local-dem-tiles",
+      "name": "China local DEM override tiles",
+      "path": "data/terrain/china-local-dem-tiles.json",
+      "license": "SRTM / Open Topo Data dataset terms; verify before production redistribution",
+      "use": "Local higher-density DEM replacement tiles for close-up terrain inspection and later tracing.",
+      "sourceUrl": "https://api.opentopodata.org/v1/srtm90m",
+      "sourceDatasetUrl": "https://www.opentopodata.org/datasets/srtm/",
+      "sourceRepositoryUrl": "https://github.com/bopen/elevation",
+      "preferredLocalDataset": "srtm30m",
+      "generatedBy": "scripts/generate-local-dem-tile.js"
+    },
+    {
+      "id": "china-srtm90m-medium",
+      "name": "China SRTM 90m medium-density height grid",
+      "path": "data/terrain/china-srtm90m-medium.json",
+      "license": "SRTM / Open Topo Data dataset terms; verify before production redistribution",
+      "use": "Medium-density real DEM grid used as the runtime terrain mesh's preferred national-scale height source.",
+      "sourceUrl": "https://api.opentopodata.org/v1/srtm90m",
+      "sourceDatasetUrl": "https://www.opentopodata.org/datasets/srtm/",
+      "generatedBy": "scripts/generate-china-dem-grid.js"
+    },
+    {
+      "id": "china-srtm90m-sample",
+      "name": "China SRTM 90m sample height grid",
+      "path": "data/terrain/china-srtm90m-sample.json",
+      "license": "SRTM / Open Topo Data dataset terms; verify before production redistribution",
+      "use": "Low-resolution real DEM sample used as the runtime fallback when the medium-density grid is unavailable.",
+      "sourceUrl": "https://api.opentopodata.org/v1/srtm90m",
+      "sourceDatasetUrl": "https://www.opentopodata.org/datasets/srtm/"
+    },
+    {
+      "id": "china-detail-patches",
+      "name": "China local terrain detail patches",
+      "path": "data/terrain/china-detail-patches.json",
+      "license": "Project-authored sculpting metadata",
+      "use": "Local meter-level offsets layered over the sample DEM to support later hand-sculpted or TopoExport-derived terrain detail patches."
+    }
+  ],
+  "nextSteps": [
+    "Add South China Sea island and inset references beyond the ADM1 land mask.",
+    "Replace rough national-scale areas with higher-resolution local DEM or reviewed hand-traced patch data.",
+    "Add more local detail patches from manual reference work or approved TopoExport/GeoTIFF local exports.",
+    "Merge short contour segments into longer contour paths after DEM resolution is upgraded."
+  ]
+}

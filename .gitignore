@@ -1,0 +1,14 @@
+node_modules/
+.tmp/
+tmp_docx_render/
+release/
+Mineradio/
+external-skills/
+tuoguan-manager/
+
+tmp_*
+*.log
+*.apk
+
+.DS_Store
+Thumbs.db

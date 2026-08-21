@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#08090b">
+    <title>China Terrain Atlas</title>
+    <link rel="stylesheet" href="world-map.css">
+  </head>
+  <body>
+    <main class="world-shell">
+      <section id="mapCanvas" class="map-canvas" aria-label="中国三维地形图"></section>
+
+      <header class="atlas-header">
+        <div>
+          <p class="atlas-kicker">TERRAIN SURVEY</p>
+          <h1>China Terrain Atlas</h1>
+        </div>
+        <nav class="atlas-actions" aria-label="地形图操作">
+          <button id="focusChinaBtn" class="text-button" type="button">中国板块</button>
+          <button id="manualTraceBtn" class="text-button" type="button" aria-pressed="false">临摹草稿</button>
+          <button id="generateManualTraceBtn" class="text-button" type="button" disabled>生成候选</button>
+          <button id="undoManualTraceBtn" class="icon-button" type="button" title="撤销临摹点" disabled>
+            <span aria-hidden="true">↶</span>
+          </button>
+          <button id="reverseManualTraceBtn" class="icon-button" type="button" title="反向临摹线" disabled>
+            <span aria-hidden="true">⇄</span>
+          </button>
+          <button id="closeManualTraceBtn" class="icon-button" type="button" title="闭合临摹区域" disabled>
+            <span aria-hidden="true">□</span>
+          </button>
+          <button id="simplifyManualTraceBtn" class="icon-button" type="button" title="抽稀临摹点" disabled>
+            <span aria-hidden="true">≋</span>
+          </button>
+          <button id="smoothManualTraceBtn" class="icon-button" type="button" title="平滑临摹线" disabled>
+            <span aria-hidden="true">⌁</span>
+          </button>
+          <button id="deleteManualTracePointBtn" class="icon-button" type="button" title="Delete selected trace point" disabled>
+            <span aria-hidden="true">&minus;</span>
+          </button>
+          <button id="clearManualTraceBtn" class="icon-button" type="button" title="清空临摹草稿" disabled>
+            <span aria-hidden="true">×</span>
+          </button>
+          <button id="autoRotateBtn" class="icon-button is-active" type="button" aria-pressed="true" title="自动旋转">
+            <span aria-hidden="true">↻</span>
+          </button>
+          <button id="zoomOutBtn" class="icon-button" type="button" title="缩小">
+            <span aria-hidden="true">−</span>
+          </button>
+          <button id="zoomInBtn" class="icon-button" type="button" title="放大">
+            <span aria-hidden="true">+</span>
+          </button>
+          <button id="resetViewBtn" class="icon-button" type="button" title="重置视角">
+            <span aria-hidden="true">◎</span>
+          </button>
+        </nav>
+      </header>
+
+      <aside class="atlas-panel" aria-live="polite">
+        <p class="panel-label">TERRAIN POINT</p>
+        <h2 id="selectedTitle">中国板块</h2>
+        <p id="selectedMeta">18°N-54°N · 73°E-135°E</p>
+        <div class="metric-row">
+          <span id="selectedMetricLabel">地势</span>
+          <strong id="selectedMetric">西高东低</strong>
+        </div>
+        <div id="traceProfile" class="trace-profile" aria-label="临摹线高程剖面" hidden></div>
+        <div id="terrainTileTraceSummary" class="terrain-tile-trace-summary" aria-label="高清图块临摹参考" hidden></div>
+        <div id="terrainTileInspectStatus" class="terrain-tile-inspect-status" data-state="idle" hidden>DEM 检查：未选择高清区域</div>
+        <div id="terrainTileInspectContext" class="terrain-tile-inspect-context" hidden></div>
+        <div id="terrainTilePipelineStatus" class="terrain-tile-pipeline-status" hidden></div>
+        <div id="terrainTilePipelineChips" class="terrain-tile-pipeline-chips" hidden></div>
+        <div id="manualTraceStatus" class="manual-trace-status" aria-label="临摹草稿状态">临摹草稿：0 点</div>
+        <div id="terrainWorkflowSummary" class="terrain-workflow-summary" aria-label="Terrain workflow summary"></div>
+        <div class="metric-row">
+          <span>观察距离</span>
+          <strong id="selectedZoom">5.60</strong>
+        </div>
+        <section id="viewControlPanel" class="view-control-panel" aria-label="3D 视图控制">
+          <div class="view-control-panel-header">
+            <span>3D 视图控制</span>
+            <small>zoom / relief</small>
+          </div>
+          <div class="view-preset-control" id="terrainViewPresetControls" role="group" aria-label="3D observation presets">
+            <span>Scale</span>
+            <button class="view-preset-button" type="button" data-view-preset="far" aria-pressed="false">Far</button>
+            <button class="view-preset-button" type="button" data-view-preset="mid" aria-pressed="false">Mid</button>
+            <button class="view-preset-button" type="button" data-view-preset="near" aria-pressed="false">Near</button>
+          </div>
+          <label class="control-slider" for="viewZoomRange">
+            <span>观察距离</span>
+            <input id="viewZoomRange" type="range" min="2.18" max="7.2" step="0.01" value="5.6">
+            <strong id="viewZoomValue">5.60</strong>
+          </label>
+          <label class="control-slider" for="terrainReliefRange">
+            <span>地形起伏</span>
+            <input id="terrainReliefRange" type="range" min="0.6" max="1.8" step="0.05" value="1">
+            <strong id="terrainReliefValue">1.00x</strong>
+          </label>
+          <div class="density-control" id="terrainDetailDensityControls" role="group" aria-label="DEM detail density">
+            <span>Detail</span>
+            <button class="density-button is-active" type="button" data-detail-density-mode="auto" aria-pressed="true">Auto</button>
+            <button class="density-button" type="button" data-detail-density-mode="compact" aria-pressed="false">Clean</button>
+            <button class="density-button" type="button" data-detail-density-mode="fine" aria-pressed="false">Fine</button>
+          </div>
+          <div id="terrainDetailDensityStatus" class="density-status" aria-live="polite">Auto | DEM detail pending</div>
+          <div id="terrainObservationModeStatus" class="observation-mode-status" data-mode="explore" aria-live="polite">Explore | national terrain context</div>
+          <div id="terrainDetailLodGuidance" class="lod-guidance" aria-live="polite">Far: province shape, major terrain, main water</div>
+          <div id="terrainDetailLodSummary" class="lod-summary" aria-live="polite" aria-label="LOD readiness summary"></div>
+          <div id="terrainDetailLodRecipe" class="lod-recipe" aria-label="LOD layer recipe"></div>
+          <button id="terrainDetailApplyRecipeBtn" class="view-control-button" type="button">Apply LOD recipe</button>
+          <button id="focusInspectionLayersBtn" class="view-control-button" type="button">高清检查图层</button>
+        </section>
+        <div id="layerLegend" class="layer-legend" aria-label="地形图图例"></div>
+        <p id="layerSummary" class="layer-summary"></p>
+        <section id="patchConsole" class="patch-console" aria-label="地形补丁控制台">
+          <div class="patch-console-header">
+            <span>地形补丁</span>
+            <small>细节 / 候选 / 已审</small>
+          </div>
+          <button id="applyApprovedPatchesBtn" class="approved-terrain-preview-button" type="button" aria-pressed="false">Apply approved preview</button>
+          <div id="patchButtons" class="patch-buttons" aria-label="局部细节补丁"></div>
+          <div id="suggestionButtons" class="suggestion-buttons" aria-label="候选补丁"></div>
+        </section>
+        <section id="terrainTilePanel" class="terrain-tile-panel" aria-label="高清地形区域">
+          <div class="terrain-tile-panel-header">
+            <span>高清地形区域</span>
+            <small>DEM tile</small>
+          </div>
+          <div id="terrainTileWorkflowInspector" class="terrain-tile-workflow-inspector" aria-label="选中 DEM 地块摘要" hidden></div>
+          <div id="terrainTileRenderQa" class="terrain-tile-render-qa" aria-label="Selected DEM render QA" hidden></div>
+          <div id="terrainTileVisualRecommendation" class="terrain-tile-visual-recommendation" aria-label="DEM tile visual recommendation" hidden>
+            <span>Recommend</span>
+            <strong>Natural</strong>
+            <button id="applyTerrainTileVisualRecommendationBtn" type="button">Apply</button>
+          </div>
+          <div id="terrainTileVisualPresetControls" class="terrain-tile-visual-preset-control" role="group" aria-label="DEM tile visual tuning">
+            <span>Style</span>
+            <button class="terrain-tile-visual-preset-button is-active" type="button" data-terrain-tile-visual-preset="natural" aria-pressed="true">Natural</button>
+            <button class="terrain-tile-visual-preset-button" type="button" data-terrain-tile-visual-preset="relief" aria-pressed="false">Relief</button>
+            <button class="terrain-tile-visual-preset-button" type="button" data-terrain-tile-visual-preset="soft-edge" aria-pressed="false">Soft edge</button>
+          </div>
+          <div id="terrainTileButtons" class="terrain-tile-buttons" aria-label="已加载 DEM tile 区域"></div>
+          <button id="startTerrainTileTraceBtn" class="terrain-tile-trace-button" type="button" hidden disabled>在此区域临摹</button>
+          <button id="seedRidgeTraceBtn" class="terrain-tile-trace-button" type="button" hidden disabled>用山脊线临摹</button>
+          <button id="seedValleyTraceBtn" class="terrain-tile-trace-button" type="button" hidden disabled>用谷线临摹</button>
+          <button id="generateRecommendedTileSuggestionsBtn" class="terrain-tile-trace-button" type="button" hidden disabled>生成推荐候选</button>
+        </section>
+        <section id="terrainSourcePanel" class="terrain-source-panel" aria-label="真实地形数据源">
+          <div class="terrain-source-panel-header">
+            <span>真实地形数据源</span>
+            <small>DEM source</small>
+          </div>
+          <div id="terrainSourceButtons" class="terrain-source-buttons" aria-label="可导入真实地形数据源"></div>
+        </section>
+        <div id="traceButtons" class="trace-buttons" aria-label="地形临摹线"></div>
+        <section id="cityPanel" class="city-panel" aria-label="城市板块">
+          <div class="city-panel-header">
+            <span>城市板块</span>
+            <small>已测地级市</small>
+          </div>
+          <div id="cityButtons" class="city-buttons" aria-label="已测地级市"></div>
+        </section>
+        <div id="siteButtons" class="site-buttons" aria-label="地形观察点"></div>
+      </aside>
+
+      <div class="atlas-status" role="status">
+        <span id="hoverLabel">拖拽旋转，滚轮缩放，点击地点查看地形</span>
+      </div>
+    </main>
+
+    <script src="vendor/three.r128.min.js"></script>
+    <script src="world-map-core.js?v=terrain-20260703al"></script>
+    <script src="world-map.js?v=terrain-20260703al"></script>
+  </body>
+</html>

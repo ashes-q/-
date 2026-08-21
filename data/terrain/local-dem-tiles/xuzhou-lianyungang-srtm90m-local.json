@@ -1,0 +1,64 @@
+{
+  "id": "xuzhou-lianyungang-srtm90m-local",
+  "label": "Xuzhou-Lianyungang local SRTM90m tile",
+  "sourceName": "Open Topo Data SRTM 90m API",
+  "sourceUrl": "https://api.opentopodata.org/v1/srtm90m",
+  "bounds": {
+    "minLat": 34.12,
+    "maxLat": 34.72,
+    "minLng": 117.05,
+    "maxLng": 119.45
+  },
+  "latitudes": [
+    34.12,
+    34.27,
+    34.42,
+    34.57,
+    34.72
+  ],
+  "longitudes": [
+    117.05,
+    117.65,
+    118.25,
+    118.85,
+    119.45
+  ],
+  "elevationsMeters": [
+    [
+      36,
+      46,
+      17,
+      5,
+      2
+    ],
+    [
+      39,
+      29,
+      37,
+      2,
+      3
+    ],
+    [
+      37,
+      30,
+      29,
+      5,
+      1
+    ],
+    [
+      39,
+      30,
+      32,
+      12,
+      0
+    ],
+    [
+      33,
+      40,
+      40,
+      13,
+      255
+    ]
+  ],
+  "sourcePath": "data/terrain/local-dem-tiles/xuzhou-lianyungang-srtm90m-local.json"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "china-terrain-source-catalog",
+  "type": "terrain-source-catalog",
+  "scope": "china-3d-terrain",
+  "generatedAt": "2026-07-04",
+  "note": "Import-ready real elevation sources for replacing the current coarse national DEM and extending local hand-traced terrain detail.",
+  "sources": [
+    {
+      "id": "mapzen-terrain-tiles-aws",
+      "name": "Mapzen Terrain Tiles on AWS",
+      "kind": "visual-elevation-tiles",
+      "format": "terrain-rgb",
+      "resolutionMeters": 30,
+      "coverage": "Global, including China",
+      "priority": 1,
+      "sourceUrl": "https://registry.opendata.aws/terrain-tiles/",
+      "githubUrl": "https://github.com/tilezen/joerd",
+      "importScript": "scripts/import-mapzen-terrain-tile.js",
+      "npmScript": "terrain:mapzen:tile",
+      "access": "Public AWS Open Data bucket",
+      "license": "Open data; verify attribution for shipped map products",
+      "importPlan": "Use terrarium or normal terrain tiles as browser-ready elevation texture tiles, then decode height per tile for close zoom terrain rendering."
+    },
+    {
+      "id": "copernicus-dem-glo-30",
+      "name": "Copernicus DEM GLO-30",
+      "kind": "digital-surface-model",
+      "format": "GeoTIFF",
+      "resolutionMeters": 30,
+      "coverage": "Global land surface, including China coverage in public cloud catalogs",
+      "priority": 2,
+      "sourceUrl": "https://registry.opendata.aws/copernicus-dem/",
+      "catalogUrl": "https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30",
+      "access": "Public cloud STAC and GeoTIFF tiles",
+      "license": "Copernicus DEM license; verify redistribution terms before bundling derived tiles",
+      "importPlan": "Download China-bounds GeoTIFF tiles, resample into project DEM grids and local 30m terrain tiles for the most inspected regions."
+    },
+    {
+      "id": "nasa-srtmgl1-v003",
+      "name": "NASA SRTMGL1 v003",
+      "kind": "digital-elevation-model",
+      "format": "HGT/GeoTIFF",
+      "resolutionMeters": 30,
+      "coverage": "56S-60N land coverage, including China",
+      "priority": 3,
+      "sourceUrl": "https://www.earthdata.nasa.gov/data/catalog/lpcloud-srtmgl1-003",
+      "githubUrl": "https://github.com/bopen/elevation",
+      "access": "NASA Earthdata source; open tooling can download and clip SRTM tiles",
+      "license": "NASA/USGS public data terms; verify downstream packaging",
+      "importPlan": "Use as the reliable 30m fallback DEM source for local tiles where Copernicus or terrain-rgb tiles are unavailable."
+    }
+  ]
+}

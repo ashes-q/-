@@ -1,0 +1,27 @@
+{
+  "name": "china-terrain-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive 3D China terrain atlas",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "terrain:dem": "node scripts/generate-china-dem-grid.js",
+    "terrain:dem:full": "node scripts/generate-china-dem-grid.js --profile=full",
+    "terrain:dem:tile": "node scripts/generate-local-dem-tile.js",
+    "terrain:mapzen:tile": "node scripts/import-mapzen-terrain-tile.js",
+    "terrain:dem:split": "node scripts/split-local-dem-tiles.js",
+    "terrain:suggestions": "node scripts/generate-trace-patch-suggestions.js",
+    "terrain:promote": "node scripts/promote-trace-patch-suggestions.js",
+    "terrain:rivers": "node scripts/extract-china-rivers.js",
+    "terrain:waterrefs": "node scripts/extract-china-water-references.js",
+    "terrain:hydrosheds": "node scripts/extract-china-hydrosheds-water.js",
+    "verify:patch-console": "electron scripts/verify-patch-console-ui.js",
+    "test": "node --test world-map-core.test.js geodata.test.js scripts/safe-script-output.test.js scripts/generate-local-dem-tile.test.js scripts/import-mapzen-terrain-tile.test.js scripts/split-local-dem-tiles.test.js scripts/generate-trace-patch-suggestions.test.js",
+    "check": "node --check main.js && node --check world-map-core.js && node --check world-map.js && node --check scripts/extract-china-rivers.js && node --check scripts/extract-china-water-references.js && node --check scripts/extract-china-hydrosheds-water.js && node --check scripts/generate-china-dem-grid.js && node --check scripts/generate-local-dem-tile.js && node --check scripts/import-mapzen-terrain-tile.js && node --check scripts/split-local-dem-tiles.js && node --check scripts/generate-trace-patch-suggestions.js && node --check scripts/promote-trace-patch-suggestions.js && node --check scripts/safe-script-output.js && node --check scripts/verify-patch-console-ui.js"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11"
+  },
+  "dependencies": {}
+}

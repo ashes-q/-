@@ -1,0 +1,1004 @@
+{
+  "id": "china-trace-patch-suggestions",
+  "type": "terrain-detail-patch-suggestions",
+  "sourceTraceLayerId": "china-trace-guides",
+  "units": "meters",
+  "note": "Draft radial, line-band, and polygon-mask patch candidates generated from terrain tracing guides. Review before copying any candidate into china-detail-patches.json.",
+  "summary": {
+    "total": 58,
+    "lifts": 45,
+    "depressions": 13
+  },
+  "patches": [
+    {
+      "id": "himalaya-main-ridge-sculpt-01",
+      "label": "喜马拉雅主脊线 1",
+      "kind": "radial",
+      "sourceTraceId": "himalaya-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 30,
+        "lng": 81.3
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "himalaya-main-ridge-sculpt-02",
+      "label": "喜马拉雅主脊线 2",
+      "kind": "radial",
+      "sourceTraceId": "himalaya-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 28.8,
+        "lng": 84.2
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "himalaya-main-ridge-sculpt-03",
+      "label": "喜马拉雅主脊线 3",
+      "kind": "radial",
+      "sourceTraceId": "himalaya-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 28.8,
+        "lng": 88.2
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "himalaya-main-ridge-sculpt-04",
+      "label": "喜马拉雅主脊线 4",
+      "kind": "radial",
+      "sourceTraceId": "himalaya-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 29.2,
+        "lng": 92
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "himalaya-main-ridge-sculpt-05",
+      "label": "喜马拉雅主脊线 5",
+      "kind": "radial",
+      "sourceTraceId": "himalaya-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 29.4,
+        "lng": 95.4
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "himalaya-main-ridge-sculpt-band",
+      "label": "喜马拉雅主脊线 band",
+      "kind": "line-band",
+      "sourceTraceId": "himalaya-main-ridge",
+      "sourceTraceKind": "ridge",
+      "points": [
+        {
+          "lat": 30,
+          "lng": 81.3
+        },
+        {
+          "lat": 28.8,
+          "lng": 84.2
+        },
+        {
+          "lat": 28.8,
+          "lng": 88.2
+        },
+        {
+          "lat": 29.2,
+          "lng": 92
+        },
+        {
+          "lat": 29.4,
+          "lng": 95.4
+        }
+      ],
+      "widthDegrees": 0.5,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "tianshan-main-ridge-sculpt-01",
+      "label": "天山主脊线 1",
+      "kind": "radial",
+      "sourceTraceId": "tianshan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 42.8,
+        "lng": 80.4
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "tianshan-main-ridge-sculpt-02",
+      "label": "天山主脊线 2",
+      "kind": "radial",
+      "sourceTraceId": "tianshan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 42.7,
+        "lng": 83.5
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "tianshan-main-ridge-sculpt-03",
+      "label": "天山主脊线 3",
+      "kind": "radial",
+      "sourceTraceId": "tianshan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 43.1,
+        "lng": 86.8
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "tianshan-main-ridge-sculpt-04",
+      "label": "天山主脊线 4",
+      "kind": "radial",
+      "sourceTraceId": "tianshan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 43,
+        "lng": 89.8
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "tianshan-main-ridge-sculpt-05",
+      "label": "天山主脊线 5",
+      "kind": "radial",
+      "sourceTraceId": "tianshan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 43.5,
+        "lng": 92.4
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "tianshan-main-ridge-sculpt-06",
+      "label": "天山主脊线 6",
+      "kind": "radial",
+      "sourceTraceId": "tianshan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 43.2,
+        "lng": 94.8
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "tianshan-main-ridge-sculpt-band",
+      "label": "天山主脊线 band",
+      "kind": "line-band",
+      "sourceTraceId": "tianshan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "points": [
+        {
+          "lat": 42.8,
+          "lng": 80.4
+        },
+        {
+          "lat": 42.7,
+          "lng": 83.5
+        },
+        {
+          "lat": 43.1,
+          "lng": 86.8
+        },
+        {
+          "lat": 43,
+          "lng": 89.8
+        },
+        {
+          "lat": 43.5,
+          "lng": 92.4
+        },
+        {
+          "lat": 43.2,
+          "lng": 94.8
+        }
+      ],
+      "widthDegrees": 0.5,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qilian-main-ridge-sculpt-01",
+      "label": "祁连山主脊线 1",
+      "kind": "radial",
+      "sourceTraceId": "qilian-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 38.7,
+        "lng": 95.3
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qilian-main-ridge-sculpt-02",
+      "label": "祁连山主脊线 2",
+      "kind": "radial",
+      "sourceTraceId": "qilian-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 38.5,
+        "lng": 97.2
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qilian-main-ridge-sculpt-03",
+      "label": "祁连山主脊线 3",
+      "kind": "radial",
+      "sourceTraceId": "qilian-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 38.1,
+        "lng": 99.2
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qilian-main-ridge-sculpt-04",
+      "label": "祁连山主脊线 4",
+      "kind": "radial",
+      "sourceTraceId": "qilian-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 37.7,
+        "lng": 100.8
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qilian-main-ridge-sculpt-05",
+      "label": "祁连山主脊线 5",
+      "kind": "radial",
+      "sourceTraceId": "qilian-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 37.2,
+        "lng": 102.1
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qilian-main-ridge-sculpt-06",
+      "label": "祁连山主脊线 6",
+      "kind": "radial",
+      "sourceTraceId": "qilian-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 36.7,
+        "lng": 103.4
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qilian-main-ridge-sculpt-band",
+      "label": "祁连山主脊线 band",
+      "kind": "line-band",
+      "sourceTraceId": "qilian-main-ridge",
+      "sourceTraceKind": "ridge",
+      "points": [
+        {
+          "lat": 38.7,
+          "lng": 95.3
+        },
+        {
+          "lat": 38.5,
+          "lng": 97.2
+        },
+        {
+          "lat": 38.1,
+          "lng": 99.2
+        },
+        {
+          "lat": 37.7,
+          "lng": 100.8
+        },
+        {
+          "lat": 37.2,
+          "lng": 102.1
+        },
+        {
+          "lat": 36.7,
+          "lng": 103.4
+        }
+      ],
+      "widthDegrees": 0.5,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "hengduan-main-ridge-sculpt-01",
+      "label": "横断山主脊线 1",
+      "kind": "radial",
+      "sourceTraceId": "hengduan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 32.5,
+        "lng": 97.8
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "hengduan-main-ridge-sculpt-02",
+      "label": "横断山主脊线 2",
+      "kind": "radial",
+      "sourceTraceId": "hengduan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 31,
+        "lng": 98.4
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "hengduan-main-ridge-sculpt-03",
+      "label": "横断山主脊线 3",
+      "kind": "radial",
+      "sourceTraceId": "hengduan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 29.6,
+        "lng": 99.1
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "hengduan-main-ridge-sculpt-04",
+      "label": "横断山主脊线 4",
+      "kind": "radial",
+      "sourceTraceId": "hengduan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 28.2,
+        "lng": 99.4
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "hengduan-main-ridge-sculpt-05",
+      "label": "横断山主脊线 5",
+      "kind": "radial",
+      "sourceTraceId": "hengduan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 26.6,
+        "lng": 99.8
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "hengduan-main-ridge-sculpt-06",
+      "label": "横断山主脊线 6",
+      "kind": "radial",
+      "sourceTraceId": "hengduan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 25,
+        "lng": 100.4
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "hengduan-main-ridge-sculpt-band",
+      "label": "横断山主脊线 band",
+      "kind": "line-band",
+      "sourceTraceId": "hengduan-main-ridge",
+      "sourceTraceKind": "ridge",
+      "points": [
+        {
+          "lat": 32.5,
+          "lng": 97.8
+        },
+        {
+          "lat": 31,
+          "lng": 98.4
+        },
+        {
+          "lat": 29.6,
+          "lng": 99.1
+        },
+        {
+          "lat": 28.2,
+          "lng": 99.4
+        },
+        {
+          "lat": 26.6,
+          "lng": 99.8
+        },
+        {
+          "lat": 25,
+          "lng": 100.4
+        }
+      ],
+      "widthDegrees": 0.5,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-west-edge-sculpt-01",
+      "label": "四川盆地西缘线 1",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-west-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 33,
+        "lng": 102
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-west-edge-sculpt-02",
+      "label": "四川盆地西缘线 2",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-west-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 31.8,
+        "lng": 102.8
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-west-edge-sculpt-03",
+      "label": "四川盆地西缘线 3",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-west-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 30.6,
+        "lng": 103.5
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-west-edge-sculpt-04",
+      "label": "四川盆地西缘线 4",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-west-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 29.4,
+        "lng": 104
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-west-edge-sculpt-05",
+      "label": "四川盆地西缘线 5",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-west-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 28.3,
+        "lng": 104.6
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-west-edge-sculpt-band",
+      "label": "四川盆地西缘线 band",
+      "kind": "line-band",
+      "sourceTraceId": "sichuan-basin-west-edge",
+      "sourceTraceKind": "basin-edge",
+      "points": [
+        {
+          "lat": 33,
+          "lng": 102
+        },
+        {
+          "lat": 31.8,
+          "lng": 102.8
+        },
+        {
+          "lat": 30.6,
+          "lng": 103.5
+        },
+        {
+          "lat": 29.4,
+          "lng": 104
+        },
+        {
+          "lat": 28.3,
+          "lng": 104.6
+        }
+      ],
+      "widthDegrees": 0.55,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-east-edge-sculpt-01",
+      "label": "四川盆地东缘线 1",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-east-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 32.2,
+        "lng": 107.4
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-east-edge-sculpt-02",
+      "label": "四川盆地东缘线 2",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-east-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 31.4,
+        "lng": 108.2
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-east-edge-sculpt-03",
+      "label": "四川盆地东缘线 3",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-east-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 30.6,
+        "lng": 108.7
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-east-edge-sculpt-04",
+      "label": "四川盆地东缘线 4",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-east-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 29.6,
+        "lng": 108.4
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-east-edge-sculpt-05",
+      "label": "四川盆地东缘线 5",
+      "kind": "radial",
+      "sourceTraceId": "sichuan-basin-east-edge",
+      "sourceTraceKind": "basin-edge",
+      "center": {
+        "lat": 28.7,
+        "lng": 107.6
+      },
+      "radiusDegrees": 0.95,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "sichuan-basin-east-edge-sculpt-band",
+      "label": "四川盆地东缘线 band",
+      "kind": "line-band",
+      "sourceTraceId": "sichuan-basin-east-edge",
+      "sourceTraceKind": "basin-edge",
+      "points": [
+        {
+          "lat": 32.2,
+          "lng": 107.4
+        },
+        {
+          "lat": 31.4,
+          "lng": 108.2
+        },
+        {
+          "lat": 30.6,
+          "lng": 108.7
+        },
+        {
+          "lat": 29.6,
+          "lng": 108.4
+        },
+        {
+          "lat": 28.7,
+          "lng": 107.6
+        }
+      ],
+      "widthDegrees": 0.55,
+      "deltaMeters": 260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qinling-ridge-sculpt-01",
+      "label": "秦岭山脊线 1",
+      "kind": "radial",
+      "sourceTraceId": "qinling-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 33.7,
+        "lng": 105.5
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qinling-ridge-sculpt-02",
+      "label": "秦岭山脊线 2",
+      "kind": "radial",
+      "sourceTraceId": "qinling-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 33.8,
+        "lng": 107.2
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qinling-ridge-sculpt-03",
+      "label": "秦岭山脊线 3",
+      "kind": "radial",
+      "sourceTraceId": "qinling-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 34,
+        "lng": 109
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qinling-ridge-sculpt-04",
+      "label": "秦岭山脊线 4",
+      "kind": "radial",
+      "sourceTraceId": "qinling-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 34.2,
+        "lng": 110.8
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qinling-ridge-sculpt-05",
+      "label": "秦岭山脊线 5",
+      "kind": "radial",
+      "sourceTraceId": "qinling-ridge",
+      "sourceTraceKind": "ridge",
+      "center": {
+        "lat": 34.3,
+        "lng": 112.2
+      },
+      "radiusDegrees": 0.85,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "qinling-ridge-sculpt-band",
+      "label": "秦岭山脊线 band",
+      "kind": "line-band",
+      "sourceTraceId": "qinling-ridge",
+      "sourceTraceKind": "ridge",
+      "points": [
+        {
+          "lat": 33.7,
+          "lng": 105.5
+        },
+        {
+          "lat": 33.8,
+          "lng": 107.2
+        },
+        {
+          "lat": 34,
+          "lng": 109
+        },
+        {
+          "lat": 34.2,
+          "lng": 110.8
+        },
+        {
+          "lat": 34.3,
+          "lng": 112.2
+        }
+      ],
+      "widthDegrees": 0.5,
+      "deltaMeters": 420,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yarlung-tsangpo-valley-sculpt-01",
+      "label": "雅鲁藏布江谷地线 1",
+      "kind": "radial",
+      "sourceTraceId": "yarlung-tsangpo-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 29.3,
+        "lng": 83.5
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yarlung-tsangpo-valley-sculpt-02",
+      "label": "雅鲁藏布江谷地线 2",
+      "kind": "radial",
+      "sourceTraceId": "yarlung-tsangpo-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 29.2,
+        "lng": 84.8
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yarlung-tsangpo-valley-sculpt-03",
+      "label": "雅鲁藏布江谷地线 3",
+      "kind": "radial",
+      "sourceTraceId": "yarlung-tsangpo-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 29.3,
+        "lng": 87.6
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yarlung-tsangpo-valley-sculpt-04",
+      "label": "雅鲁藏布江谷地线 4",
+      "kind": "radial",
+      "sourceTraceId": "yarlung-tsangpo-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 29.5,
+        "lng": 90.2
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yarlung-tsangpo-valley-sculpt-05",
+      "label": "雅鲁藏布江谷地线 5",
+      "kind": "radial",
+      "sourceTraceId": "yarlung-tsangpo-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 29.4,
+        "lng": 92.4
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yarlung-tsangpo-valley-sculpt-06",
+      "label": "雅鲁藏布江谷地线 6",
+      "kind": "radial",
+      "sourceTraceId": "yarlung-tsangpo-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 29.7,
+        "lng": 94.6
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yarlung-tsangpo-valley-sculpt-band",
+      "label": "雅鲁藏布江谷地线 band",
+      "kind": "line-band",
+      "sourceTraceId": "yarlung-tsangpo-valley",
+      "sourceTraceKind": "valley",
+      "points": [
+        {
+          "lat": 29.3,
+          "lng": 83.5
+        },
+        {
+          "lat": 29.2,
+          "lng": 84.8
+        },
+        {
+          "lat": 29.3,
+          "lng": 87.6
+        },
+        {
+          "lat": 29.5,
+          "lng": 90.2
+        },
+        {
+          "lat": 29.4,
+          "lng": 92.4
+        },
+        {
+          "lat": 29.7,
+          "lng": 94.6
+        }
+      ],
+      "widthDegrees": 0.45,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yangtze-upper-valley-sculpt-01",
+      "label": "长江上游谷地线 1",
+      "kind": "radial",
+      "sourceTraceId": "yangtze-upper-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 32,
+        "lng": 91.8
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yangtze-upper-valley-sculpt-02",
+      "label": "长江上游谷地线 2",
+      "kind": "radial",
+      "sourceTraceId": "yangtze-upper-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 31.6,
+        "lng": 96
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yangtze-upper-valley-sculpt-03",
+      "label": "长江上游谷地线 3",
+      "kind": "radial",
+      "sourceTraceId": "yangtze-upper-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 30.9,
+        "lng": 99.4
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yangtze-upper-valley-sculpt-04",
+      "label": "长江上游谷地线 4",
+      "kind": "radial",
+      "sourceTraceId": "yangtze-upper-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 30.7,
+        "lng": 102.4
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yangtze-upper-valley-sculpt-05",
+      "label": "长江上游谷地线 5",
+      "kind": "radial",
+      "sourceTraceId": "yangtze-upper-valley",
+      "sourceTraceKind": "valley",
+      "center": {
+        "lat": 30.6,
+        "lng": 105.6
+      },
+      "radiusDegrees": 0.75,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "yangtze-upper-valley-sculpt-band",
+      "label": "长江上游谷地线 band",
+      "kind": "line-band",
+      "sourceTraceId": "yangtze-upper-valley",
+      "sourceTraceKind": "valley",
+      "points": [
+        {
+          "lat": 32,
+          "lng": 91.8
+        },
+        {
+          "lat": 31.6,
+          "lng": 96
+        },
+        {
+          "lat": 30.9,
+          "lng": 99.4
+        },
+        {
+          "lat": 30.7,
+          "lng": 102.4
+        },
+        {
+          "lat": 30.6,
+          "lng": 105.6
+        }
+      ],
+      "widthDegrees": 0.45,
+      "deltaMeters": -260,
+      "reviewStatus": "draft"
+    }
+  ]
+}
